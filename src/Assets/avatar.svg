@@ -18,8 +18,8 @@
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
-                <use id="Circle-Background" fill="#972dc2" xlink:href="#path-1"></use>
-                <g id="🖍-Circle-Color" mask="url(#mask-2)" fill="#8a4ca8">
+                <use id="Circle-Background" fill="#87CEFA" xlink:href="#path-1"></use>
+                <g id="🖍-Circle-Color" mask="url(#mask-2)" fill="#ADD8E6">
                     <rect id="🖍Color" x="0" y="0" width="216.445361" height="216"></rect>
                 </g>
             </g>
@@ -44,7 +44,7 @@
                     <mask id="mask-8" fill="white">
                         <use xlink:href="#path-7"></use>
                     </mask>
-                    <use id="Hoodie" fill="#B7C1DB" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    <use id="Hoodie" fill="#B0E0E6" fill-rule="evenodd" xlink:href="#path-7"></use>
                     <g id="Color/Palette/Slate" mask="url(#mask-8)" fill="#293347" fill-rule="evenodd">
                         <rect id="🖍Color" x="0" y="0" width="238.490722" height="99"></rect>
                     </g>
