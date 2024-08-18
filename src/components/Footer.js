@@ -23,40 +23,30 @@ function Footer() {
           <ul className="footer-icons">
             <li className="social-icons">
               <a
-                href="https://github.com/soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="https://github.com/Nath9666"
+                target="_blank"
+                rel="noreferrer"
+                className="icon-colour  home-social-icons"
               >
                 <AiFillGithub />
               </a>
             </li>
             <li className="social-icons">
               <a
-                href="https://twitter.com/Soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/soumyajit4419/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/nathan-morel-4b993b1b7/"
+                target="_blank"
+                rel="noreferrer"
+                className="icon-colour  home-social-icons"
               >
                 <FaLinkedinIn />
               </a>
             </li>
             <li className="social-icons">
               <a
-                href="https://www.instagram.com/soumyajit4419"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="https://www.instagram.com/nathan__morel/"
+                target="_blank"
+                rel="noreferrer"
+                className="icon-colour home-social-icons"
               >
                 <AiFillInstagram />
               </a>
