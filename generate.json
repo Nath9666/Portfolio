@@ -1,0 +1,38 @@
+{
+  "nom": "Nathan Morel",
+  "telephone": "07 68 99 75 15",
+  "email": "nathan.morel@efrei.net",
+  "savoir-etre": [
+    "Autonome",
+    "Curieux",
+    "Rigoureux",
+    "Organisé",
+    "Sociable"
+  ],
+  "langues": [
+    {
+      "langue": "Anglais",
+      "niveau": "B2, 550 au toeic"
+    },
+    {
+      "langue": "Espagnol",
+      "niveau": "A2"
+    },
+    {
+      "langue": "Français",
+      "niveau": "Langue maternelle"
+    }
+  ],
+  "passions": [
+    "Informatique",
+    "Jeux vidéo",
+    "Cinéma",
+    "Musique",
+    "Lego",
+    "Créations"
+  ],
+  "sport": [
+    "Badminton (seul et en équipe)",
+    "Roller"
+  ]
+}
