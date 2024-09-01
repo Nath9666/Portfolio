@@ -130,5 +130,41 @@
         "Modelisation 3D"
       ]
     }
+  ],
+  "formation": [
+    {
+      "date": "2021 - 2022",
+      "intitule": "Cycle préparatoire ingénieur informatique",
+      "ecole": "Ecole Efrei Paris",
+      "ville": "Villejuif (94)",
+      "afficher": true,
+      "description": [
+        "Présentation de l'école lors des journées portes ouvertes",
+        "Trésorier bénévole dans l'association Efrei3D"
+      ]
+    },
+    {
+      "date": "2020",
+      "intitule": "Baccalauréat Scientifique Mention Assez Bien Option Informatique",
+      "ecole": "Lycée Gaspard Monge",
+      "ville": "Savigny-sur-Orge (91)",
+      "afficher": true,
+      "description": [
+        "Bénévole à la cafétéria de l'école",
+        "Membre du club de robotique finaliste national en 2019",
+        "Membre du conseil des délégués pour la vie lycéenne (CVL)"
+      ]
+    },
+    {
+      "date": "Mention Très Bien",
+      "intitule": "Brevet des collèges",
+      "ecole": "Collège Jean Zay",
+      "afficher": true,
+      "ville": "Morsang-sur-Orge (91)",
+      "description": [
+        "Délégué",
+        "Participation à la journée de la science à l'INRA"
+      ]
+    }
   ]
 }

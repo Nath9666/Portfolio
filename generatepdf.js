@@ -62,7 +62,9 @@ const generatePDF = () => {
 
   title(doc, "Langues", col1Width / 2, 150, { align: "center" });
   jsonData.langues.forEach((langue, index) => {
-    text(doc, `- ${langue.langue} (${langue.niveau})`, 10, 160 + index * 10, { align: "left" });
+    text(doc, `- ${langue.langue} (${langue.niveau})`, 10, 160 + index * 10, {
+      align: "left",
+    });
   });
 
   title(doc, "Passions", col1Width / 2, 200, { align: "center" });
@@ -77,22 +79,55 @@ const generatePDF = () => {
 
   // Ajouter le contenu de la deuxième colonne
   doc.setTextColor("black");
-  title(doc, "Expérience Professionnelle", col2Width , 20, { align: "center" });
+  title(doc, "Expérience Professionnelle", col2Width, 20, { align: "center" });
   jsonData.experiences.forEach((experience, expIndex) => {
     if (experience.afficher) {
-      text(doc, `${experience.date}`, col2Width , 30 + expIndex * 50, { align: "center" });
-      text(doc, `${experience.type}`, col2Width , 40 + expIndex * 50, { align: "center" });
-      text(doc, `${experience.intitule}`, col2Width , 50 + expIndex * 50, { align: "center" });
-      text(doc, `${experience.entreprise}`, col2Width , 60 + expIndex * 50, { align: "center" });
-      text(doc, `${experience.ville}`, col2Width , 70 + expIndex * 50, { align: "center" });
+      text(doc, `${experience.date}`, col2Width, 30 + expIndex * 50, {
+        align: "left",
+      });
+      text(doc, `${experience.intitule}`, col2Width, 50 + expIndex * 50, {
+        align: "left",
+      });
+      text(doc, `${experience.entreprise}`, col2Width, 60 + expIndex * 50, {
+        align: "left",
+      });
+      text(doc, `${experience.ville}`, col2Width, 70 + expIndex * 50, {
+        align: "left",
+      });
       experience.description.forEach((desc, descIndex) => {
-        text(doc, `- ${desc}`, col2Width , 80 + expIndex * 50 + descIndex * 10, { align: "left" });
+        text(doc, `- ${desc}`, col2Width, 80 + expIndex * 50 + descIndex * 10, {
+          align: "left",
+        });
       });
     }
   });
 
   title(doc, "Formation", col2Width , 300, { align: "center" });
-  // Ajoutez ici les détails de la formation
+  jsonData.formation.forEach((formation, formIndex) => {
+    if (formation.afficher) {
+      text(doc, `${formation.date}`, col2Width , 310 + formIndex * 50, {
+        align: "left",
+      });
+      text(doc, `${formation.intitule}`, col2Width , 320 + formIndex * 50, {
+        align: "left",
+      });
+      text(doc, `${formation.ecole}`, col2Width , 330 + formIndex * 50, {
+        align: "left",
+      });
+      text(doc, `${formation.ville}`, col2Width , 340 + formIndex * 50, {
+        align: "left",
+      });
+      formation.description.forEach((desc, descIndex) => {
+        text(
+          doc,
+          `- ${desc}`,
+          col2Width ,
+          350 + formIndex * 50 + descIndex * 10,
+          { align: "left" }
+        );
+      });
+    }
+  });
 
   // Spécifiez le chemin où vous voulez enregistrer le fichier PDF
   const filePath = path.join(__dirname, "./src/Assets/NathanMorel.pdf");
