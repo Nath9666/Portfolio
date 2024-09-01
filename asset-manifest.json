@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.ca4ccd3f.css",
-    "main.js": "/Portfolio/static/js/main.ea903acf.js",
+    "main.js": "/Portfolio/static/js/main.25c25b4c.js",
     "static/js/415.4d6acbeb.chunk.js": "/Portfolio/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/leaf.png": "/Portfolio/static/media/leaf.ff2616f664c8c0ceab91.png",
@@ -12,18 +12,18 @@
     "static/media/home-main.svg": "/Portfolio/static/media/home-main.359935c39288e92d4dba5c9f2445b91d.svg",
     "static/media/about.png": "/Portfolio/static/media/about.aee0f771fbfc1e7b8fa8.png",
     "static/media/chatify.png": "/Portfolio/static/media/chatify.7206044e0b5cdad44726.png",
-    "static/media/NathanMorel.pdf": "/Portfolio/static/media/NathanMorel.062b94ca9d4ffe05c23b.pdf",
+    "static/media/NathanMorel.pdf": "/Portfolio/static/media/NathanMorel.3e8ed56725d202d04c1b.pdf",
     "static/media/home-bg.jpg": "/Portfolio/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
     "static/media/avatar.svg": "/Portfolio/static/media/avatar.380197d9a509b0af9e5e7e8037e3d29a.svg",
     "static/media/pre.svg": "/Portfolio/static/media/pre.2c17cd7fee84f7295a22.svg",
     "index.html": "/Portfolio/index.html",
     "main.ca4ccd3f.css.map": "/Portfolio/static/css/main.ca4ccd3f.css.map",
-    "main.ea903acf.js.map": "/Portfolio/static/js/main.ea903acf.js.map",
+    "main.25c25b4c.js.map": "/Portfolio/static/js/main.25c25b4c.js.map",
     "415.4d6acbeb.chunk.js.map": "/Portfolio/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca4ccd3f.css",
-    "static/js/main.ea903acf.js"
+    "static/js/main.25c25b4c.js"
   ]
 }
