@@ -34,5 +34,101 @@
   "sport": [
     "Badminton (seul et en équipe)",
     "Roller"
+  ],
+  "experiences": [
+    {
+      "date": "2020 - maintenant",
+      "type": "associatif",
+      "intitule": "president (2021-2022) et trésorier (2020-2021 et 2022 à maintenant)",
+      "entreprise": "Efrei3D",
+      "ville": "VilleJuif (94)",
+      "afficher": true,
+      "description": [
+        "Gestion de l'association",
+        "Gestion des projets",
+        "Gestion des finances",
+        "Gestion des ressources humaines"
+      ]
+    },
+    {
+      "date": "juillet 2021",
+      "type": "stage",
+      "intitule": "Développeur d'application et aide aux ingénieurs",
+      "entreprise": "Intercontrole",
+      "ville": "Chalon-sur-Saone (71)",
+      "afficher": true,
+      "description": [
+        "Développement d'une application de gestion de projet",
+        "Debut du devellopement en VBA",
+        "Aide aux ingénieurs dans leurs tâches"
+      ]
+    },
+    {
+      "date": "décembre à janvier 2022",
+      "type": "stage",
+      "intitule": "Stagiaire et responsable de rayon",
+      "entreprise": "Nature et decouvertes",
+      "ville": "Evry (91)",
+      "afficher": true,
+      "description": [
+        "Gestion des stocks",
+        "Gestion des commandes",
+        "Accuillir les clients",
+        "Organiser les rayons"
+      ]
+    },
+    {
+      "date": "étét 2021 et 2022",
+      "type": "stage",
+      "intitule": "Animateur au Sercive municipal de la jeunesse",
+      "entreprise": "Ville de Morsang-sur-Orge",
+      "ville": "Morsang-sur-Orge (91)",
+      "afficher": true,
+      "description": [
+        "Organisation d'activités",
+        "Surveillance des enfants",
+        "encadrement de mineur"
+      ]
+    },
+    {
+      "date": "hiver 2023",
+      "type": "stage",
+      "intitule": "Animateur au Sercive municipal de la jeunesse",
+      "entreprise": "Ville de Bretigny-sur-Orge",
+      "ville": "Bretigny-sur-Orge (91)",
+      "afficher": true,
+      "description": [
+        "Organisation d'activités",
+        "Surveillance des enfants",
+        "encadrement de mineur"
+      ]
+    },
+    {
+      "date": "été 2017",
+      "type": "stage",
+      "intitule": "Animateur en accueil collectif de mineurs",
+      "entreprise": "Communauté territoriale - Association Rougemont",
+      "ville": "Rougemont (25)",
+      "afficher": false,
+      "description": [
+        "Supervision des enfants de 8 à 15 ans",
+        "Accompagnement des mineurs dans la réalisation de leurs projets",
+        "Activités sportives et culturelles"
+      ]
+    },
+    {
+      "date": "novembre 2023 à avril 2024",
+      "type": "stage",
+      "intitule": "Développeur en réalité virtuelle",
+      "entreprise": "Dotvision",
+      "ville": "Moissy-Cramayel (77)",
+      "afficher": true,
+      "description": [
+        "Développement d'une application de réalité virtuelle",
+        "Développement en C#",
+        "Développement avec Unreal Engine",
+        "Modelisation 3D"
+      ]
+    }
   ]
 }
