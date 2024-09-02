@@ -8,29 +8,30 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Bonjour à tous, je suis <span className="purple">Nathan Morel</span>
+            Bonjour, je suis <span className="purple">Nathan Morel</span>.
             <br />
-            Je suis passionné par la création, qu'elle soit digitale ou manuelle.
+            Passionné par la création, qu'elle soit digitale ou artisanale, je
+            suis constamment à la recherche de nouvelles technologies et de
+            méthodes innovantes pour donner vie à mes idées.
             <br />
-            J'adore les nouvelles technologies.
             <br />
-            <br />
-            En dehors du code, voici quelques activités que j'aime faire !
+            En dehors de mon travail de développeur, voici quelques activités
+            qui nourrissent ma créativité :
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Lego
+              <ImPointRight /> Construction de modèles Lego
             </li>
             <li className="about-activity">
-              <ImPointRight /> Création d'objets en bois
+              <ImPointRight /> Fabrication d'objets en bois
             </li>
             <li className="about-activity">
-              <ImPointRight /> Roller
+              <ImPointRight /> Pratique du roller
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Si on veut, on peut. Sinon, on ne peut pas."{" "}
+            "Si la solution n'existe pas, créez-la. Sinon, améliorez-la."
           </p>
           <footer className="blockquote-footer">Nathan Morel</footer>
         </blockquote>

@@ -4,7 +4,6 @@ import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -16,41 +15,47 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              PERMETTEZ-MOI DE <span className="purple"> ME PRÉSENTER </span>
+              LAISSEZ-MOI <span className="purple"> ME PRÉSENTER </span>
             </h1>
             <p className="home-about-body">
-              Je suis tombé amoureux de la programmation et j'ai au moins appris
-              quelque chose, je pense… 🤷‍♂️
+              Passionné par la programmation, j'ai acquis une solide expérience
+              dans ce domaine.
               <br />
               <br />
-              Je maîtrise les classiques comme
+              Je maîtrise plusieurs langages de programmation, notamment
               <i>
-                <b className="purple"> python, Javascript and C. </b>
+                <b className="purple"> Python, JavaScript et C.</b>
               </i>
               <br />
               <br />
-              Mes domaines d'intérêt sont la création de nouvelles &nbsp;
-              <i>
-                <b className="purple">technologies et produits web</b> et
-                également dans des domaines liés aux{" "}
-                <b className="purple">jeux.</b>
-              </i>
-              <br />
-              <br />
-              Au possible, j'applique également ma passion pour le développement
-              de produits avec <b className="purple">
-                Node.js et UnrealEngine
-              </b>{" "}
-              et
+              Mes domaines d'expertise incluent la création de
               <i>
                 <b className="purple">
                   {" "}
-                  les bibliothèques et frameworks JavaScript modernes
+                  technologies et produits web innovants{" "}
                 </b>
               </i>
-              &nbsp; comme
+              ainsi que le développement dans le secteur des
               <i>
-                <b className="purple"> React.js et Next.js</b>
+                <b className="purple"> jeux vidéo.</b>
+              </i>
+              <br />
+              <br />
+              J'applique également ma passion pour le développement de produits
+              en utilisant
+              <i>
+                <b className="purple"> Node.js et Unreal Engine </b>
+              </i>
+              ainsi que les
+              <i>
+                <b className="purple">
+                  {" "}
+                  bibliothèques et frameworks JavaScript modernes{" "}
+                </b>
+              </i>
+              tels que
+              <i>
+                <b className="purple"> React.js et Next.js.</b>
               </i>
             </p>
           </Col>
