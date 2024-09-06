@@ -11,59 +11,45 @@ import {
   DiJava,
 } from "react-icons/di";
 import {
-  SiRedis,
+  SiCss3,
+  SiCsharp,
+  SiHtml5,
   SiFirebase,
   SiNextdotjs,
-  SiSolidity,
   SiPostgresql,
+  SiMysql,
+  SiBlender,
+  SiThreedotjs
 } from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
+
+const techIcons = [
+  CgCPlusPlus,
+  SiBlender,
+  DiJavascript1,
+  SiMysql,
+  DiNodejs,
+  SiCss3,
+  SiCsharp,
+  SiHtml5,
+  DiReact,
+  DiMongodb,
+  SiNextdotjs,
+  DiGit,
+  SiFirebase,
+  SiThreedotjs,
+  SiPostgresql,
+  DiPython,
+  DiJava,
+];
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSolidity />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
+      {techIcons.map((Icon, index) => (
+        <Col key={index} xs={4} md={2} className="tech-icons">
+          <Icon />
+        </Col>
+      ))}
     </Row>
   );
 }
