@@ -2,9 +2,7 @@
   Portfolio Website - v2.0<br/>
 </h2>
 
-<br/>
-
-## Built With
+Built With
 
 This project was built using these technologies.
 
