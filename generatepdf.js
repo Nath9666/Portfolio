@@ -122,7 +122,7 @@ const generatePDF = () => {
           doc,
           `- ${desc}`,
           col2Width ,
-          350 + formIndex * 50 + descIndex * 10,
+          350 + formIndex * 50 + descIndex * 11,
           { align: "left" }
         );
       });
