@@ -2,13 +2,7 @@
   "nom": "Nathan Morel",
   "telephone": "07 68 99 75 15",
   "email": "nathan.morel@efrei.net",
-  "savoir-etre": [
-    "Autonome",
-    "Curieux",
-    "Rigoureux",
-    "Organisé",
-    "Sociable"
-  ],
+  "savoir-etre": ["Autonome", "Curieux", "Rigoureux", "Organisé", "Sociable"],
   "langues": [
     {
       "langue": "Anglais",
@@ -31,15 +25,12 @@
     "Lego",
     "Créations"
   ],
-  "sport": [
-    "Badminton (seul et en équipe)",
-    "Roller"
-  ],
+  "sport": ["Badminton (seul et en équipe)", "Roller"],
   "experiences": [
     {
-      "date": "2020 - maintenant",
+      "date": "Septembre 2020 - maintenant",
       "type": "associatif",
-      "intitule": "president (2021-2022) et trésorier (2020-2021 et 2022 à maintenant)",
+      "intitule": "President (2021-2022) et trésorier (2020-2021 et 2022 à maintenant)",
       "entreprise": "Efrei3D",
       "ville": "VilleJuif (94)",
       "afficher": true,
@@ -51,7 +42,7 @@
       ]
     },
     {
-      "date": "juillet 2021",
+      "date": "Juillet 2021",
       "type": "stage",
       "intitule": "Développeur d'application et aide aux ingénieurs",
       "entreprise": "Intercontrole",
@@ -64,7 +55,7 @@
       ]
     },
     {
-      "date": "décembre à janvier 2022",
+      "date": "Décembre à janvier 2022",
       "type": "stage",
       "intitule": "Stagiaire et responsable de rayon",
       "entreprise": "Nature et decouvertes",
@@ -78,12 +69,12 @@
       ]
     },
     {
-      "date": "étét 2021 et 2022",
+      "date": "Eté 2021 et 2022",
       "type": "stage",
       "intitule": "Animateur au Sercive municipal de la jeunesse",
       "entreprise": "Ville de Morsang-sur-Orge",
       "ville": "Morsang-sur-Orge (91)",
-      "afficher": true,
+      "afficher": false,
       "description": [
         "Organisation d'activités",
         "Surveillance des enfants",
@@ -91,12 +82,12 @@
       ]
     },
     {
-      "date": "hiver 2023",
+      "date": "Hiver 2023",
       "type": "stage",
       "intitule": "Animateur au Sercive municipal de la jeunesse",
       "entreprise": "Ville de Bretigny-sur-Orge",
       "ville": "Bretigny-sur-Orge (91)",
-      "afficher": true,
+      "afficher": false,
       "description": [
         "Organisation d'activités",
         "Surveillance des enfants",
@@ -104,7 +95,7 @@
       ]
     },
     {
-      "date": "été 2017",
+      "date": "Eté 2017",
       "type": "stage",
       "intitule": "Animateur en accueil collectif de mineurs",
       "entreprise": "Communauté territoriale - Association Rougemont",
@@ -117,7 +108,7 @@
       ]
     },
     {
-      "date": "novembre 2023 à avril 2024",
+      "date": "Novembre 2023 à avril 2024",
       "type": "stage",
       "intitule": "Développeur en réalité virtuelle",
       "entreprise": "Dotvision",
@@ -133,7 +124,7 @@
   ],
   "formation": [
     {
-      "date": "2021 - 2022",
+      "date": "2021 - 2025",
       "intitule": "Cycle préparatoire ingénieur informatique",
       "ecole": "Ecole Efrei Paris",
       "ville": "Villejuif (94)",
@@ -156,14 +147,15 @@
       ]
     },
     {
-      "date": "Mention Très Bien",
+      "date": "2017",
       "intitule": "Brevet des collèges",
       "ecole": "Collège Jean Zay",
-      "afficher": true,
+      "afficher": false,
       "ville": "Morsang-sur-Orge (91)",
       "description": [
         "Délégué",
-        "Participation à la journée de la science à l'INRA"
+        "Participation à la journée de la science à l'INRA",
+        "Mention Très Bien"
       ]
     }
   ]
