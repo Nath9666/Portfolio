@@ -2,6 +2,7 @@
   "nom": "Nathan Morel",
   "telephone": "07 68 99 75 15",
   "email": "nathan.morel@efrei.net",
+  "site": "https://nath9666.github.io/Portfolio",
   "savoir-etre": ["Autonome", "Curieux", "Rigoureux", "Organisé", "Sociable"],
   "langues": [
     {
@@ -124,14 +125,14 @@
   ],
   "formation": [
     {
-      "date": "2021 - 2025",
-      "intitule": "Cycle préparatoire ingénieur informatique",
+      "date": "2021 - maintenant",
+      "intitule": "Etude d'ingénieur informatique généraliste",
       "ecole": "Ecole Efrei Paris",
       "ville": "Villejuif (94)",
       "afficher": true,
       "description": [
-        "Présentation de l'école lors des journées portes ouvertes",
-        "Trésorier bénévole dans l'association Efrei3D"
+        "Specialisée en réalité virtuelle et modélisation 3D",
+        "Présentation de l'école lors des journées portes ouvertes"
       ]
     },
     {

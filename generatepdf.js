@@ -33,8 +33,8 @@ const generatePDF = () => {
   doc.addFileToVFS("Roboto-Bold.ttf", fontDataBold);
   doc.addFileToVFS("Roboto-Italic.ttf", fontDataItalic);
   doc.addFont("Roboto-Regular.ttf", "Roboto", "normal");
-  doc.addFont("Roboto-Bold.ttf", "Roboto", "bold");
-  doc.addFont("Roboto-Italic.ttf", "Roboto", "italic");
+  doc.addFont("Roboto-Bold.ttf", "Robot", "bold");
+  doc.addFont("Roboto-Italic.ttf", "Robo", "italic");
 
   doc.setFont("Roboto");
 
@@ -46,8 +46,8 @@ const generatePDF = () => {
   console.log(pageWidth, pageHeight, col1Width, col2Width);
 
   // Définir les couleurs
-  const primary = "#87CEFA";
-  const secondary = "#86a8b3";
+  const primary = "#1d1950";
+  const secondary = "#5f90f8";
   const whiteColor = "#FFFFFF";
   const blackColor = "#000000";
   const greyColor = "#808080";
@@ -65,7 +65,7 @@ const generatePDF = () => {
   const number3 = jsonData.passions.length;
   const number4 = jsonData.sport.length;
 
-  //! Vérifier si la taille de la page est suffisante pour le contenu
+  //! Vérifier si la taille de la page est suffisante pour le contenu gauche
   if (
     pageMarginTop +
       5 * paragraphMargin +
@@ -105,12 +105,35 @@ const generatePDF = () => {
     pageMarginTop + paragraphMargin + 2 * lineMargin,
     { align: "left" }
   );
+  // Ajouter un lien pour l'email
+  doc.link(
+    0,
+    pageMarginTop + paragraphMargin + 2 * lineMargin - 6,
+    col1Width,
+    10,
+    { url: `mailto:${jsonData.email}` }
+  );
+  text(
+    doc,
+    `Site: ${jsonData.site}`,
+    pageMarginLeft,
+    pageMarginTop + paragraphMargin + 3 * lineMargin,
+    { align: "left" },
+    10
+  );
+  doc.link(
+    0,
+    pageMarginTop + paragraphMargin + 3 * lineMargin - 6,
+    col1Width,
+    10,
+    { url: `${jsonData.site}` }
+  );
 
   title(
     doc,
     "Savoir-être",
     col1Width / 2,
-    pageMarginTop + 2 * paragraphMargin + 2 * lineMargin,
+    pageMarginTop + 2 * paragraphMargin + 3 * lineMargin,
     { align: "center" }
   );
   jsonData["savoir-etre"].forEach((item, index) => {
@@ -118,7 +141,7 @@ const generatePDF = () => {
       doc,
       `- ${item}`,
       pageMarginLeft,
-      pageMarginTop + 2 * paragraphMargin + 3 * lineMargin + index * lineMargin,
+      pageMarginTop + 2 * paragraphMargin + 4 * lineMargin + index * lineMargin,
       { align: "left" }
     );
   });
@@ -127,7 +150,7 @@ const generatePDF = () => {
     doc,
     "Langues",
     col1Width / 2,
-    pageMarginTop + 3 * paragraphMargin + (3 + number - 1) * lineMargin,
+    pageMarginTop + 3 * paragraphMargin + (4 + number - 1) * lineMargin,
     { align: "center" }
   );
   jsonData.langues.forEach((langue, index) => {
@@ -137,7 +160,7 @@ const generatePDF = () => {
       pageMarginLeft,
       pageMarginTop +
         3 * paragraphMargin +
-        (3 + number) * lineMargin +
+        (4 + number) * lineMargin +
         index * lineMargin,
       {
         align: "left",
@@ -151,7 +174,7 @@ const generatePDF = () => {
     col1Width / 2,
     pageMarginTop +
       4 * paragraphMargin +
-      (3 + number + number2 - 1) * lineMargin,
+      (4 + number + number2 - 1) * lineMargin,
     { align: "center" }
   );
   jsonData.passions.forEach((passion, index) => {
@@ -161,7 +184,7 @@ const generatePDF = () => {
       pageMarginLeft,
       pageMarginTop +
         4 * paragraphMargin +
-        (3 + number + number2) * lineMargin +
+        (4 + number + number2) * lineMargin +
         index * lineMargin,
       {
         align: "left",
@@ -175,7 +198,7 @@ const generatePDF = () => {
     col1Width / 2,
     pageMarginTop +
       5 * paragraphMargin +
-      (3 + number + number2 + number3 - 1) * lineMargin,
+      (4 + number + number2 + number3 - 1) * lineMargin,
     { align: "center" }
   );
   jsonData.sport.forEach((sport, index) => {
@@ -185,7 +208,7 @@ const generatePDF = () => {
       pageMarginLeft,
       pageMarginTop +
         5 * paragraphMargin +
-        (3 + number + number2 + number3) * lineMargin +
+        (4 + number + number2 + number3) * lineMargin +
         index * lineMargin,
       {
         align: "left",
@@ -197,7 +220,7 @@ const generatePDF = () => {
   doc.setTextColor(primary);
   title(
     doc,
-    "Expérience Professionnelle",
+    "Expériences Professionnelles",
     col2Width / 2 + pageMarginLeft,
     pageMarginTop + paragraphMargin / 2,
     {
@@ -210,7 +233,7 @@ const generatePDF = () => {
     doc.setTextColor(secondary);
     if (experience.afficher) {
       // Entreprise en gras
-      doc.setFont("Roboto", "bold");
+      doc.setFont("Robot", "bold");
       text(
         doc,
         `${experience.entreprise}`,
@@ -234,7 +257,7 @@ const generatePDF = () => {
 
       doc.setTextColor(blackColor);
       // Intitulé en plus petit et en italique
-      doc.setFont("Roboto", "italic");
+      doc.setFont("Robo", "italic");
       text(
         doc,
         `${experience.intitule}`,
@@ -243,11 +266,10 @@ const generatePDF = () => {
           (2 * paragraphMargin) / 2 +
           (index * paragraphMargin) / 2 +
           espace +
-          lineMargin,
+          lineMargin / 1.5,
         {
           align: "left",
-        },
-        10
+        }
       );
 
       // Date en police normale
@@ -260,10 +282,11 @@ const generatePDF = () => {
           (2 * paragraphMargin) / 2 +
           (index * paragraphMargin) / 2 +
           espace +
-          2 * lineMargin,
+          (2 * lineMargin) / 1.5,
         {
           align: "left",
-        }
+        },
+        10
       );
 
       doc.setTextColor(greyColor);
@@ -277,66 +300,117 @@ const generatePDF = () => {
             (2 * paragraphMargin) / 2 +
             (index * paragraphMargin) / 2 +
             espace +
-            3 * lineMargin +
-            descIndex * lineMargin/2,
-          { align: "left" }, 10
+            (3 * lineMargin) / 1.5 +
+            (descIndex * lineMargin) / 2,
+          { align: "left" },
+          10
         );
       });
       index += 1;
-      espace = lineMargin/1.4 * (2 + experience.description.length) + espace;
+      espace =
+        (lineMargin / 1.4) * (2 + experience.description.length) + espace;
     }
   });
 
-  title(doc, "Formation", col2Width / 2 + pageMarginLeft, 300, {
-    align: "center",
-  });
+  const espaceFormation =
+    pageMarginTop +
+    paragraphMargin / 2 +
+    ((index - 1) * paragraphMargin) / 2 +
+    espace +
+    3 * lineMargin;
+
+  doc.setTextColor(primary);
+  title(
+    doc,
+    "Formation",
+    col2Width / 2 + pageMarginLeft,
+    espaceFormation - lineMargin / 2,
+    {
+      align: "left",
+    }
+  );
+  let indexFormation = 0;
+  let espace2 = 0;
   jsonData.formation.forEach((formation, formIndex) => {
     if (formation.afficher) {
+      // Date en police normale
+      doc.setTextColor(blackColor);
       text(
         doc,
         `${formation.date}`,
         col2Width / 2 + pageMarginLeft,
-        310 + formIndex * 50,
+        espaceFormation +
+          lineMargin / 1.5 +
+          (indexFormation * paragraphMargin) / 2 +
+          espace2,
         {
           align: "left",
         }
       );
+
+      // Intitulé en plus gras et plus gros
+      doc.setFont("Robot", "bold");
+      doc.setTextColor(secondary);
       text(
         doc,
         `${formation.intitule}`,
         col2Width / 2 + pageMarginLeft,
-        320 + formIndex * 50,
+        espaceFormation +
+          (2 * lineMargin) / 1.5 +
+          (indexFormation * paragraphMargin) / 2 +
+          espace2,
         {
           align: "left",
         }
       );
+
+      // Ecole et Ville en police italique et gris
+      doc.setFont("Robo", "italic");
+      doc.setTextColor(greyColor);
       text(
         doc,
         `${formation.ecole}`,
         col2Width / 2 + pageMarginLeft,
-        330 + formIndex * 50,
+        espaceFormation +
+          (3 * lineMargin) / 1.5 +
+          (indexFormation * paragraphMargin) / 2 +
+          espace2,
         {
           align: "left",
-        }
+        },
+        10
       );
       text(
         doc,
         `${formation.ville}`,
         col2Width / 2 + pageMarginLeft,
-        340 + formIndex * 50,
+        espaceFormation +
+          (4 * lineMargin) / 1.5 +
+          (indexFormation * paragraphMargin) / 2 +
+          espace2,
         {
           align: "left",
-        }
+        },
+        10
       );
+
+      // Description en bullet points grisée
       formation.description.forEach((desc, descIndex) => {
         text(
           doc,
           `- ${desc}`,
           col2Width / 2 + pageMarginLeft,
-          350 + formIndex * 50 + descIndex * 11,
-          { align: "left" }
+          espaceFormation +
+            (5 * lineMargin) / 1.5 +
+            (indexFormation * paragraphMargin) / 2 +
+            espace2 +
+            (descIndex * lineMargin) / 2,
+          { align: "left" },
+          10
         );
       });
+      indexFormation += 1;
+      espace2 = lineMargin * (2 + formation.description.length) + espace2;
     }
   });
 
