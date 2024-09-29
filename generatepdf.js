@@ -38,6 +38,9 @@ const generatePDF = () => {
 
   doc.setFont("Roboto");
 
+  //? Definir Variables
+  const maxRow = 4;
+
   // Définir les dimensions
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
@@ -291,21 +294,24 @@ const generatePDF = () => {
 
       doc.setTextColor(greyColor);
       // Description en bullet points
-      experience.description.forEach((desc, descIndex) => {
-        text(
-          doc,
-          `- ${desc}`,
-          col2Width / 2 + pageMarginLeft,
-          pageMarginTop +
-            (2 * paragraphMargin) / 2 +
-            (index * paragraphMargin) / 2 +
-            espace +
-            (3 * lineMargin) / 1.5 +
-            (descIndex * lineMargin) / 2,
-          { align: "left" },
-          10
-        );
-      });
+      for (let i = 0; i < experience.description.length; i++) {
+        if (i < maxRow) {
+          text(
+            doc,
+            `- ${experience.description[i]}`,
+            col2Width / 2 + pageMarginLeft,
+            pageMarginTop +
+              (2 * paragraphMargin) / 2 +
+              (index * paragraphMargin) / 2 +
+              espace +
+              (3 * lineMargin) / 1.5 +
+              (i * lineMargin) / 2,
+            { align: "left" },
+            10
+          );
+        }
+      }
+
       index += 1;
       espace =
         (lineMargin / 1.4) * (2 + experience.description.length) + espace;
@@ -395,20 +401,22 @@ const generatePDF = () => {
       );
 
       // Description en bullet points grisée
-      formation.description.forEach((desc, descIndex) => {
-        text(
-          doc,
-          `- ${desc}`,
-          col2Width / 2 + pageMarginLeft,
-          espaceFormation +
-            (5 * lineMargin) / 1.5 +
-            (indexFormation * paragraphMargin) / 2 +
-            espace2 +
-            (descIndex * lineMargin) / 2,
-          { align: "left" },
-          10
-        );
-      });
+      for (let descIndex = 0; descIndex < formation.description.length; descIndex++) {
+        if (descIndex < maxRow) {
+          text(
+            doc,
+            `- ${formation.description[descIndex]}`,
+            col2Width / 2 + pageMarginLeft,
+            espaceFormation +
+              (5 * lineMargin) / 1.5 +
+              (indexFormation * paragraphMargin) / 2 +
+              espace2 +
+              (descIndex * lineMargin) / 2,
+            { align: "left" },
+            10
+          );
+        }
+      }
       indexFormation += 1;
       espace2 = lineMargin * (2 + formation.description.length) + espace2;
     }
