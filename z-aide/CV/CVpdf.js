@@ -4,15 +4,15 @@ const path = require("path");
 const { exit } = require("process");
 
 // Charger le fichier WOFF2 en tant que base64
-const fontPath = path.join(__dirname, "./src/Assets/Roboto-Regular.ttf");
+const fontPath = path.join(__dirname, "../../src/Assets/Roboto-Regular.ttf");
 const fontData = fs.readFileSync(fontPath, "base64");
-const fontPathBold = path.join(__dirname, "./src/Assets/Roboto-Bold.ttf");
+const fontPathBold = path.join(__dirname, "../../src/Assets/Roboto-Bold.ttf");
 const fontDataBold = fs.readFileSync(fontPathBold, "base64");
-const fontPathItalic = path.join(__dirname, "./src/Assets/Roboto-Italic.ttf");
+const fontPathItalic = path.join(__dirname, "../../src/Assets/Roboto-Italic.ttf");
 const fontDataItalic = fs.readFileSync(fontPathItalic, "base64");
 
 // Charger et parser le fichier JSON
-const jsonPath = path.join(__dirname, "./generate.json");
+const jsonPath = path.join(__dirname, "./json/CV.json");
 const jsonData = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
 
 const title = (doc, text, x, y, option) => {
@@ -423,7 +423,7 @@ const generatePDF = () => {
   });
 
   // Spécifiez le chemin où vous voulez enregistrer le fichier PDF
-  const filePath = path.join(__dirname, "./src/Assets/NathanMorel.pdf");
+  const filePath = path.join(__dirname, "./pdf/NathanMorel.pdf");
 
   // Enregistrez le fichier PDF
   fs.writeFileSync(filePath, doc.output());
