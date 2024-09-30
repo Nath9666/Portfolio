@@ -1,6 +1,7 @@
 const { jsPDF } = require("jspdf");
 const fs = require("fs");
 const path = require("path");
+const { exit } = require("process");
 
 // Charger le fichier WOFF2 en tant que base64
 const fontPath = path.join(__dirname, "../../src/Assets/Roboto-Regular.ttf");
@@ -35,6 +36,7 @@ const addParagraph = (doc, text, x, y, maxWidth, lineHeight) => {
   let testLine = "";
   let lineArray = [];
   let testWidth = 0;
+  doc.setFontSize(12);
 
   for (let n = 0; n < words.length; n++) {
     testLine = line + words[n] + " ";
@@ -75,11 +77,7 @@ const generatePDF = () => {
   console.log(pageWidth, pageHeight, mid);
 
   // Définir les couleurs
-  const primary = "#1d1950";
-  const secondary = "#5f90f8";
-  const whiteColor = "#FFFFFF";
   const blackColor = "#000000";
-  const greyColor = "#808080";
 
   // Définir les marges
   const pageMarginLeft = 25;
@@ -164,15 +162,21 @@ const generatePDF = () => {
   if (jsonData.recherche.convention) {
     textObjet += ", conventionné";
   }
-  text(doc, textObjet, pageMarginLeft, temp + paragraphMargin, {
-    align: "left",
-  });
+  startY = temp + paragraphMargin;
+  temp = addParagraph(
+    doc,
+    textObjet,
+    pageMarginLeft,
+    startY,
+    maxWidth,
+    lineMargin
+  );
 
   // Ajouter un paragraphe
   const paragraphText = jsonData.paragrapheMoi;
-  startY = temp + 2 * paragraphMargin;
+  startY = temp + paragraphMargin;
 
-  addParagraph(
+  temp = addParagraph(
     doc,
     paragraphText,
     pageMarginLeft,
@@ -182,6 +186,10 @@ const generatePDF = () => {
   );
 
   //? enregistrement du fichier
+  if (temp > pageHeight - pageMarginBottom) {
+    console.error("La lettre est trop longue");
+    exit();
+  }
   // Spécifiez le chemin où vous voulez enregistrer le fichier PDF
   const filePath = path.join(__dirname, "./pdf/LM.pdf");
   // Enregistrez le fichier PDF
