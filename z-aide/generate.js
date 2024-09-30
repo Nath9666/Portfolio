@@ -1,8 +1,15 @@
 require('dotenv').config();
 const { OpenAI } = require("openai");
+const fs = require("fs");
+const path = require("path");
 
-console.log(process.env.OPENAI_API_KEY)
+//? recuperer les entreprises qui ont besoin de stagiaires via json
 
+
+
+//? demander à chat de generer
+// une lettre de motivation suivant le model que l'on a fait
+// le cv qui correspond au mieux
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -24,3 +31,10 @@ async function generateCompletion() {
 }
 
 generateCompletion();
+
+
+//? generer les json
+// generer le json du cv
+// generer le json de la lettre de motivation
+
+//? mettre a jour le json entreprises
