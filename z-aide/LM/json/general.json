@@ -2,13 +2,13 @@
   "nom": "Nathan MOREL",
   "adresse": [
     {
-      "rue": "Avenue de Juvisy",
+      "rue": "avenue de Juvisy",
       "numero": "12",
       "codePostal": "91390",
       "ville": "Morsang-Sur-Orge"
     },
     {
-      "rue": "Rue Armand Millet",
+      "rue": "rue Armand Millet",
       "numero": "44",
       "codePostal": "92340",
       "ville": "Bourg-la-Reine"
@@ -19,5 +19,12 @@
     "efrei": "nathan.morel@efrei.net",
     "pro1": "m.nathan.morel@gmail.com",
     "pro2": "mr.nathan.morel@gmail.com"
-  }
+  },
+  "recherche": {
+    "type": "stage",
+    "duree": "6 mois",
+    "dateDebut": "mars 2024",
+    "convention": true
+  },
+  "paragrapheMoi": "Je suis étudiant en 3ème année à l'Efrei Paris, une école d'ingénieur généraliste en informatique. Je suis actuellement à la recherche d'un stage de 6 mois à partir de mars 2024 dans le cadre de ma formation. Je suis très motivé et je suis prêt à m'investir pleinement dans les missions qui me seront confiées."
 }
