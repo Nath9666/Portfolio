@@ -1,0 +1,23 @@
+{
+  "nom": "Nathan MOREL",
+  "adresse": [
+    {
+      "rue": "Avenue de Juvisy",
+      "numero": "12",
+      "codePostal": "91390",
+      "ville": "Morsang-Sur-Orge"
+    },
+    {
+      "rue": "Rue Armand Millet",
+      "numero": "44",
+      "codePostal": "92340",
+      "ville": "Bourg-la-Reine"
+    }
+  ],
+  "telephone": ["07 68 99 75 15", "+33 7 68 99 75 15"],
+  "email": {
+    "efrei": "nathan.morel@efrei.net",
+    "pro1": "m.nathan.morel@gmail.com",
+    "pro2": "mr.nathan.morel@gmail.com"
+  }
+}
