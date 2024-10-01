@@ -3,6 +3,26 @@ const fs = require("fs");
 const path = require("path");
 const { exit } = require("process");
 
+// Fonction pour obtenir le dernier fichier modifié dans un dossier
+const getLastModifiedFile = (dir) => {
+  const files = fs.readdirSync(dir);
+
+  // Obtenir les informations de chaque fichier
+  const fileStats = files.map((file) => {
+    const filePath = path.join(dir, file);
+    return {
+      file: filePath,
+      mtime: fs.statSync(filePath).mtime,
+    };
+  });
+
+  // Trier les fichiers par date de modification
+  fileStats.sort((a, b) => b.mtime - a.mtime);
+
+  // Retourner le dernier fichier modifié
+  return fileStats.length > 0 ? fileStats[0].file : null;
+};
+
 // Charger le fichier WOFF2 en tant que base64
 const fontPath = path.join(__dirname, "../../src/Assets/Roboto-Regular.ttf");
 const fontData = fs.readFileSync(fontPath, "base64");
@@ -17,8 +37,26 @@ const fontDataItalic = fs.readFileSync(fontPathItalic, "base64");
 // Charger et parser le fichier JSON
 const jsonPath = path.join(__dirname, "./json/general.json");
 const jsonData = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
-const jsonPathLettre = path.join(__dirname, "./json/LM1.json");
-const jsonDataLettre = JSON.parse(fs.readFileSync(jsonPathLettre, "utf8"));
+
+// Charger et parser le dernier fichier JSON de la lettre de motivation
+// Chemin du dossier contenant les fichiers JSON
+const jsonDir = path.join(__dirname, "./json");
+
+// Obtenir le dernier fichier modifié
+const lastModifiedFile = getLastModifiedFile(jsonDir);
+let jsonDataLettre;
+let pdfName;
+
+if (lastModifiedFile) {
+  // Charger et parser le dernier fichier JSON de la lettre de motivation
+  jsonDataLettre = JSON.parse(fs.readFileSync(lastModifiedFile, "utf8"));
+  console.log(lastModifiedFile);
+  //Nom du fichier
+  pdfName = path.basename(lastModifiedFile).split(".")[0];
+} else {
+  console.error("Aucun fichier trouvé dans le dossier:", jsonDir);
+  exit();
+}
 
 // Définir les variables
 const indexAdresse = 1;
@@ -84,7 +122,7 @@ const generatePDF = () => {
   const pageMarginLeft = 25;
   const pageMarginTop = 25;
   const pageMarginBottom = 25;
-  const paragraphMargin = 15;
+  const paragraphMargin = 10;
   const lineMargin = 6;
 
   //? Ajouter le header
@@ -241,10 +279,9 @@ const generatePDF = () => {
   //? enregistrement du fichier
   if (temp > pageHeight - pageMarginBottom) {
     console.error("La lettre est trop longue");
-    exit();
   }
   // Spécifiez le chemin où vous voulez enregistrer le fichier PDF
-  const filePath = path.join(__dirname, "./pdf/LM.pdf");
+  const filePath = path.join(__dirname, "./pdf/" + pdfName + ".pdf");
   // Enregistrez le fichier PDF
   fs.writeFileSync(filePath, doc.output());
 };

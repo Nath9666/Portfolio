@@ -1,0 +1,48 @@
+{
+  "entreprises": [
+    {
+      "id": 1,
+      "nom": "Papernest",
+      "postule": "Stagiaire développeur front-end",
+      "date": "2024-10-01 13:09:00",
+      "moyen": "indeed",
+      "reponse": null,
+      "salaire": null,
+      "recherches": [],
+      "interets": 3
+    },
+    {
+      "id": 2,
+      "nom": "Dreamcities",
+      "postule": "Stagiaire développeur",
+      "date": "2024-10-01 13:25:00",
+      "moyen": "indeed",
+      "reponse": null,
+      "salaire": null,
+      "recherches": [],
+      "interets": 7
+    },
+    {
+      "id": 3,
+      "nom": "INRA",
+      "postule": "Stagiaire développeur VR/AR",
+      "date": "2024-10-01 14:00:00",
+      "moyen": "contact Wendy",
+      "reponse": null,
+      "salaire": null,
+      "recherches": [],
+      "interets": 5
+    },
+    {
+      "id": 4,
+      "nom": "Dotvision",
+      "postule": "Stagiaire développeur VR/AR",
+      "date": "2024-10-01 11:00:00",
+      "moyen": "contact Guillaume",
+      "reponse": "en reflexion",
+      "salaire": "1200-1500",
+      "recherches": [],
+      "interets": 6
+    }
+  ]
+}
