@@ -78,6 +78,7 @@ const generatePDF = () => {
 
   // Définir les couleurs
   const blackColor = "#000000";
+  const whiteColor = "#ffffff";
 
   // Définir les marges
   const pageMarginLeft = 25;
@@ -172,7 +173,7 @@ const generatePDF = () => {
     lineMargin
   );
 
-  // Ajouter un paragraphe
+  // Ajouter mon paragraphe de présentation
   const paragraphText = jsonData.paragrapheMoi;
   startY = temp + paragraphMargin;
 
@@ -184,6 +185,58 @@ const generatePDF = () => {
     maxWidth,
     lineMargin
   );
+
+  // Ajouter le paragraphe de l'entreprise
+  const paragraphEntreprise = jsonDataLettre.Vous;
+  startY = temp + paragraphMargin;
+
+  temp = addParagraph(
+    doc,
+    paragraphEntreprise,
+    pageMarginLeft,
+    startY,
+    maxWidth,
+    lineMargin
+  );
+
+  // Ajouter le paragraphe de motivation
+  const paragraphMotivation = jsonDataLettre.Nous;
+  startY = temp + paragraphMargin;
+
+  temp = addParagraph(
+    doc,
+    paragraphMotivation,
+    pageMarginLeft,
+    startY,
+    maxWidth,
+    lineMargin
+  );
+
+  //?paragraphe de fin
+  const paragraphFin = jsonData.formulePolitesse;
+  startY = temp + paragraphMargin;
+
+  temp = addParagraph(
+    doc,
+    paragraphFin,
+    pageMarginLeft,
+    startY,
+    maxWidth,
+    lineMargin
+  );
+
+  //Signature
+  const signature = jsonData.nom;
+  startY = temp + paragraphMargin;
+  text(doc, signature, pageMarginLeft + mid, startY, { align: "left" });
+  temp = startY + lineMargin;
+
+  //? Ajout de la ligne cachée
+  doc.setTextColor(whiteColor);
+  const textHidden = jsonData.Hackprompt;
+  text(doc, textHidden, pageMarginLeft, temp, { align: "left" });
+  doc.setTextColor(blackColor);
+  temp = startY + 2 * lineMargin;
 
   //? enregistrement du fichier
   if (temp > pageHeight - pageMarginBottom) {
