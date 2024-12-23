@@ -36,6 +36,7 @@
     "eject": "react-scripts eject",
     "deploy": "npm run build && gh-pages -d build",
     "cv": "node ./z-aide/CV/CVpdf.js",
+    "rename": "node ./z-aide/CV/rename.js",
     "lm": "node ./z-aide/LM/LMpdf.js",
     "generate": "node ./z-aide/generate.js"
   },
